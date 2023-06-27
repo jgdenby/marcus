@@ -45,14 +45,11 @@ PROMPT = PromptTemplate(
     template = TEMPLATE
 )
 
-embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_KEY)
 pinecone.init(
     api_key=PINECONE_KEY,
     environment=PINECONE_ENV
     )
 index_name = 'marcus'
-
-docsearch = Pinecone.from_existing_index(index_name, embeddings)
 
     # Define function to get user input
 def get_text():
@@ -83,7 +80,8 @@ def new_chat():
     st.session_state.entity_memory.entity_store = {}
     st.session_state.entity_memory.buffer.clear()
 
-API_O = st.sidebar.text_input("API-KEY", type="password")
+API_O = st.sidebar.text_input("OPENAI API-KEY", type="password")
+
 # Session state storage would be ideal
 if API_O:
     # Create an OpenAI instance
@@ -91,6 +89,9 @@ if API_O:
         openai_api_key=API_O,
         model_name='gpt-3.5-turbo',
         temperature=0.2)
+
+    embeddings = OpenAIEmbeddings(openai_api_key=API_O)
+    docsearch = Pinecone.from_existing_index(index_name, embeddings)
 
     if 'entity_memory' not in st.session_state:
             st.session_state.entity_memory = ConversationBufferWindowMemory(
