@@ -1,0 +1,4 @@
+pinecone
+streamlit
+openai
+langchain
