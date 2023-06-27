@@ -3,6 +3,9 @@ import pinecone
 import openai
 
 # from apikey import OPENAI_KEY, PINECONE_KEY, PINECONE_ENV
+OPENAI_KEY = st.secrets.OPENAI_KEY
+PINECONE_KEY = st.secrets.PINECONE_KEY
+PINECONE_ENV = st.secrets.PINECONE_ENV
 
 from langchain.vectorstores import Pinecone
 from langchain.embeddings.openai import OpenAIEmbeddings
