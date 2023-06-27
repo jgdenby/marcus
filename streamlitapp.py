@@ -2,7 +2,7 @@ import streamlit as st
 import pinecone
 import openai
 
-from apikey import OPENAI_KEY, PINECONE_KEY, PINECONE_ENV
+# from apikey import OPENAI_KEY, PINECONE_KEY, PINECONE_ENV
 
 from langchain.vectorstores import Pinecone
 from langchain.embeddings.openai import OpenAIEmbeddings
