@@ -1,5 +1,5 @@
 # marcus
-[*Chat with available stoics near you!*](https://marcusthestoic.streamlit.app/)
+[*Chat with available stoics near you!*](https://marcusthestoic.streamlit.app/)   
 We're talking Aurelius, not Gary.
 
 
