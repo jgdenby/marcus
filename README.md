@@ -1,5 +1,6 @@
 # marcus
-[*Chat with available stoics near you!*](https://marcusthestoic.streamlit.app/)   
+Marcus is currently sleeping - if you'd like to wake him up, please contact me.
+~[*Chat with available stoics near you!*](https://marcusthestoic.streamlit.app/)~  
 We're talking Aurelius, not Gary.
 
 
